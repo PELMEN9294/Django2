@@ -3,8 +3,9 @@ from django.shortcuts import render
 import datetime
 
 def hello(request):
-    #return HttpResponse("Hello World!")
-    return render(request, 'Base.html')
+    re = request.META['REMOTE_ADDR']
+    return HttpResponse(re)
+    #return render(request, 'Base.html')
 
 def current_datetime(request):
     now = datetime.datetime.now()
