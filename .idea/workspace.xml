@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827d3cf0-2b03-4d2b-9c27-ca2a731b20ce" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Hello/Templates/search_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Hello/Templates/search_result.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hello/urls.py" afterPath="$PROJECT_DIR$/Hello/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hello/views.py" afterPath="$PROJECT_DIR$/Hello/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -387,6 +383,14 @@
       <option name="presentableId" value="Default" />
       <updated>1484672808569</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added validating input search string.">
+      <created>1484985853757</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1484985853757</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -422,6 +426,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added validating input search string." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validating input search string." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
