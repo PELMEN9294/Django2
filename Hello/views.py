@@ -16,7 +16,7 @@ def hours_ahead(request, offset):
     try:
         offset = int(offset)
     except ValueError:
-        raise Http404()1
+        raise Http404()
 
     dt = datetime.datetime.now() + datetime.timedelta(hours=offset)
 
