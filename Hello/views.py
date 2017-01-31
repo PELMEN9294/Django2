@@ -6,8 +6,6 @@ from Hello.forms import ContactForm
 from django.core.mail import send_mail
 
 def hello(request):
-    #re = request.META['REMOTE_ADDR']
-    #return HttpResponse(re)
     return render(request, 'Base.html')
 
 def current_datetime(request):
@@ -52,5 +50,11 @@ def contact(request):
             )
             return HttpResponseRedirect('/contact/thanks/')
     else:
-        form = ContactForm()
+        form = ContactForm(
+            initial={
+
+                'message': 'I love your site',
+
+                    }
+            )
     return render(request, 'contact_form.html', {'form':form})
