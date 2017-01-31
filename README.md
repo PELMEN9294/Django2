@@ -1,3 +1,3 @@
 # Django2
 
-Simple project for learning via "The Django Book".
+Simple project for learning "The Django Book".
