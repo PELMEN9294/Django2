@@ -58,3 +58,6 @@ def contact(request):
                     }
             )
     return render(request, 'contact_form.html', {'form':form})
+
+def debug(request):
+    return render(request, 'debug_form.html',)

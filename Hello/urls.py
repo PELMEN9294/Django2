@@ -13,16 +13,28 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+
+
+from django.conf import settings
+from . import views
 from django.conf.urls import url
 from django.contrib import admin
-from Hello.views import hello, current_datetime, hours_ahead, search, contact
 
 urlpatterns = [
-    url(r'^$', hello),
+    url(r'^$', views.hello),
     url(r'^admin/', admin.site.urls),
-    url(r'^hello/$', hello),
-    url(r'^time/$', current_datetime),
-    url(r'^time/plus/(\d{1,2})/$', hours_ahead),
-    url(r'^search/$', search),
-    url(r'^contact/$', contact),
+    url(r'^hello/$', views.hello),
+    url(r'^time/$', views.current_datetime),
+    url(r'^time/plus/(\d{1,2})/$', views.hours_ahead),
+    url(r'^search/$', views.search),
+    url(r'^contact/$', views.contact),
+
+    url(r'^reviews/$', views.archive),
+    url(r'^reviews/<year>[0-9]{4}/$', views.archive),
+    url(r'^reviews/<year>[0-9]{4}/<month>[0-9]{2}$', views.archive),
+    url(r'^reviews/<year>[0-9]{4}/<month>[0-9]{2}/<day>[0-9]{2}$', views.review_detail),
+
 ]
+
+if settings.DEBUG:
+    urlpatterns += [url(r'^debuginfo/$', views.debug),]
